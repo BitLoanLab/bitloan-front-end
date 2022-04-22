@@ -1,5 +1,5 @@
 <template>
-  <div class="rainbow-nav" @click="isShowMore=false">
+  <div class="bitloan-nav" @click="isShowMore=false">
     <!-- navbar-nav -->
     <div class="nav-box">
       <img class="logo" src="../assets/imgs/logo.png" @click="$router.push('/')"/>
@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: "rainbowNav",
+  name: "bitloanNav",
   props: ['isShowMore'],
   data() {
     return {}
@@ -76,7 +76,7 @@ export default {
   }
 }
 
-.rainbow-nav {
+.bitloan-nav {
 
   .nav-box {
     display: flex;

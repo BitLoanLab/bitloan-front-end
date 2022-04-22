@@ -1,9 +1,13 @@
-import CreatNFT from "./data/Creator.json"
-import MultiSign from "./data/MultiSign.json"
+import CreatNFT from "../../abis/creatNFT.json";
+import LoanMarket from "../../abis/LoanMarket.json";
+import BLT from "../../abis/BLT.json";
+import BLTDeposit from "../../abis/BLTDeposit.json";
 
 const CONTRACTS = {
-    Creator:{address:"0xd6BC386d072e04f2119f1Bca3bB6F61E6B0920D7",abi:Creator},
-    MultiSign:{abi:MultiSign},
+    CreatNFT:{address:"0x9De99D255A2B84959F94397eD2F50Ab24166dC82",abi:CreatNFT},
+    LoanMarket:{address:"0x765c17461712236d0ba74e259F561cDC520D8148",abi:LoanMarket},
+    BLT:{address:"0x0E2cEA088cCD67F2b904AF4ae6aAa727e397AF8F",abi:BLT},
+    BLTDeposit:{address:"0x9De99D255A2B84959F94397eD2F50Ab24166dC82",abi:BLTDeposit},
 };
 
 function getContractByName(name, web3) {

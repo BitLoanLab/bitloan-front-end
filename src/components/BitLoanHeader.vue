@@ -27,7 +27,7 @@ import ConnectWallet from "@/components/ConnectWallet";
 import {mapGetters} from "vuex";
 
 export default {
-  name: "RainbowHeader",
+  name: "BitLoanHeader",
   components: {
     ConnectWallet,
   },

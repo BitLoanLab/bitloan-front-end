@@ -1,24 +1,24 @@
 <template>
   <div :class="classObj" class="layout">
-    <RainbowHeader/>
+    <BitLoanHeader/>
     <router-view id="main" class="layout-content"/>
-    <RainbowFooter/>
+    <BitLoanFooter/>
   </div>
 </template>
 
 <script>
 
-import RainbowHeader from "@/components/RainbowHeader"
-import RainbowFooter from "@/components/pageFooter";
+import BitLoanHeader from "@/components/BitLoanHeader"
+import BitLoanFooter from "@/components/pageFooter";
 
 export default {
   name: "layout",
   components: {
 
-    RainbowHeader,
-    RainbowFooter,
+    BitLoanHeader,
+    BitLoanFooter,
 
-  },
+},
   data() {
     return {
       showPrice: true,

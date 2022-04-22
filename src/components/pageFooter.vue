@@ -35,7 +35,7 @@
 
     </div>
     <div class="page-footer-part3">
-      Copyright@2021 www.rainbowdao.io
+      Copyright@2021 
     </div>
   </div>
 </template>

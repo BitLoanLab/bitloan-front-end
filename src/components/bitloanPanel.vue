@@ -1,12 +1,12 @@
 <template>
-  <div class="rainbowPanel r-shadow">
+  <div class="bitloanPanel r-shadow">
 <!--    <div class="line r-shadow"></div>-->
-    <div class="rainbowPanel-header">
+    <div class="bitloanPanel-header">
 <!--      <div class="left-border"></div>-->
       <img src="../assets/img/title_icon.png" alt="" class="title-icon">
       <div class="name"><slot name="name"></slot></div>
     </div>
-    <div class="rainbowPanel-content ">
+    <div class="bitloanPanel-content ">
       <slot name="content"></slot>
     </div>
   </div>
@@ -14,12 +14,12 @@
 
 <script>
 export default {
-  name: "rainbowPanel"
+  name: "bitloanPanel"
 }
 </script>
 
 <style lang="scss" scoped>
-.rainbowPanel{
+.bitloanPanel{
   background: white;
   width: 1100px;
   margin: 0 auto;
@@ -31,7 +31,7 @@ export default {
   }
   overflow: hidden;
   border-radius: 10px;
-  .rainbowPanel-header{
+  .bitloanPanel-header{
     padding:20px;
     display: flex;
     text-align: left;
@@ -57,7 +57,7 @@ export default {
       background: linear-gradient(270deg,#7700ff, #ff3b3b);
     }
   }
-  .rainbowPanel-content{
+  .bitloanPanel-content{
     padding: 0 20px;
   }
 }
