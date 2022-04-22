@@ -355,7 +355,7 @@
               src="./assets/img/SketchPng8dc204a012e7e456fc7ea4280a0a63f5f3f2eca8862566133f337fa7719a52d1.png"
             />
           </div>
-          <span class="info22">Copyright&#64;2021&nbsp;rainbowdao.io</span>
+          <span class="info22">Copyright&#64;2021&nbsp;bitloan.cc</span>
         </div>
       </div>
     </div>

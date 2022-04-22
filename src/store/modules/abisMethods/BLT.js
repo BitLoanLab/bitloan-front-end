@@ -6,7 +6,7 @@
 		}
 		const state = {};
 		const mutations = {};
-	 const actions = { 
+const actions = { 
 allowance ({rootState},{ owner,spender }){
 					judgeToken(rootState)
 					return new Promise((resolve,reject) => {
@@ -33,7 +33,7 @@ approve ({rootState},{ spender,amount }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 balanceOf ({rootState},{ account }){
 					judgeToken(rootState)
@@ -71,7 +71,7 @@ decreaseAllowance ({rootState},{ spender,subtractedValue }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 increaseAllowance ({rootState},{ spender,addedValue }){
                         judgeToken(rootState)
@@ -89,7 +89,7 @@ increaseAllowance ({rootState},{ spender,addedValue }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 name ({rootState}  ){
 					judgeToken(rootState)
@@ -137,7 +137,7 @@ transfer ({rootState},{ to,amount }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 transferFrom ({rootState},{ from,to,amount }){
                         judgeToken(rootState)
@@ -155,7 +155,7 @@ transferFrom ({rootState},{ from,to,amount }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 }
 			export default {

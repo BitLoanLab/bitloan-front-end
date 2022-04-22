@@ -6,7 +6,7 @@
 		}
 		const state = {};
 		const mutations = {};
-	 const actions = { 
+const actions = { 
 _exists ({rootState},{ tokenId }){
 					judgeToken(rootState)
 					return new Promise((resolve,reject) => {
@@ -43,7 +43,7 @@ approve ({rootState},{ _to,_tokenId }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 balanceOf ({rootState},{ _owner }){
 					judgeToken(rootState)
@@ -71,7 +71,7 @@ burn ({rootState},{ tokenId }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 creator ({rootState}  ){
 					judgeToken(rootState)
@@ -119,7 +119,7 @@ initialize ({rootState},{ _creator }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 isApprovedForAll ({rootState},{ owner,operator }){
 					judgeToken(rootState)
@@ -147,7 +147,7 @@ mint ({rootState},{ to,amounts,month,name_ }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 name ({rootState}  ){
 					judgeToken(rootState)
@@ -185,9 +185,9 @@ safeTransferFrom ({rootState},{ from,to,tokenId }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
-safeTransferFrom ({rootState},{ from,to,tokenId,_data }){
+safeTransferFrom_ ({rootState},{ from,to,tokenId,_data }){
                         judgeToken(rootState)
                         return new Promise((resolve,reject) => {
                             state.token.methods.safeTransferFrom(from,to,tokenId,_data).estimateGas({
@@ -203,7 +203,7 @@ safeTransferFrom ({rootState},{ from,to,tokenId,_data }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 setApprovalForAll ({rootState},{ operator,approved }){
                         judgeToken(rootState)
@@ -221,7 +221,7 @@ setApprovalForAll ({rootState},{ operator,approved }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 symbol ({rootState}  ){
 					judgeToken(rootState)
@@ -279,7 +279,7 @@ transfer ({rootState},{ _from,_to,_tokenId }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 }
 			export default {

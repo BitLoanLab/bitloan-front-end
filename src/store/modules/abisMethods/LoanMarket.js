@@ -6,7 +6,7 @@
 		}
 		const state = {};
 		const mutations = {};
-	 const actions = { 
+const actions = { 
 admin ({rootState}  ){
 					judgeToken(rootState)
 					return new Promise((resolve,reject) => {
@@ -33,7 +33,7 @@ init ({rootState},{ _agent,_deposits,_token }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 lend ({rootState},{ id,value }){
                         judgeToken(rootState)
@@ -51,7 +51,7 @@ lend ({rootState},{ id,value }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 lengthToken ({rootState}  ){
 					judgeToken(rootState)
@@ -89,7 +89,7 @@ mortgageMarket ({rootState},{ tokenId,amount,day,dayRate }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 repayment ({rootState},{ id,value }){
                         judgeToken(rootState)
@@ -107,7 +107,7 @@ repayment ({rootState},{ id,value }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 repealMortgage ({rootState},{ id }){
                         judgeToken(rootState)
@@ -125,7 +125,7 @@ repealMortgage ({rootState},{ id }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 }
 			export default {

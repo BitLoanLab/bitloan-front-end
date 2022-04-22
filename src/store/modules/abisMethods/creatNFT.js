@@ -6,7 +6,7 @@
 		}
 		const state = {};
 		const mutations = {};
-	 const actions = { 
+ const actions = { 
 admin ({rootState}  ){
 					judgeToken(rootState)
 					return new Promise((resolve,reject) => {
@@ -33,7 +33,7 @@ creat ({rootState},{ to,month,value,name }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 initialize ({rootState},{ _token_20,token_21 }){
                         judgeToken(rootState)
@@ -51,7 +51,7 @@ initialize ({rootState},{ _token_20,token_21 }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 token_20_ ({rootState}  ){
 					judgeToken(rootState)
@@ -79,7 +79,7 @@ withdraw ({rootState},{ tokenId }){
                         }).catch(err=>{
                             reject(JSON.parse(err.message.substr(24,err.message.length)).message)
                         })
-				    })
+			})
 			},
 }
 			export default {

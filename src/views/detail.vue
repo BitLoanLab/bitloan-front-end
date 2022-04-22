@@ -79,7 +79,7 @@
             </div>
           </div>
           <div class="input">
-            <input type="text">
+            <input type="text" v-bind="amount_borrow">
             <img src="" alt="">
             <span>BTC</span>
             <div class="max-btn">
@@ -105,7 +105,7 @@
             </div>
           </div>
           <div class="input">
-            <input type="text">
+            <input type="text" v-bind="amount_borrow">
             <img src="" alt="">
             <span>DAI</span>
             <div class="max-btn">
@@ -114,10 +114,10 @@
           </div>
         </div>
         <div class="operate-btns">
-          <div class="operate">
+          <div class="operate" @click="approve()">
             Approve
           </div>
-          <div class="operate">
+          <div class="operate" @click="borrow()">
             Borrow
           </div>
         </div>
@@ -128,8 +128,43 @@
 </template>
 
 <script>
+import getContract from "../utils/abiUtil"
+
+import {mapGetters} from "vuex"
+
 export default {
-  name: "detail"
+  name: "detail",
+
+  data(){
+    return {
+      amount_borrow:0,
+      value_borrow:0,
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'isConnected',
+      'account'
+    ]),
+  },
+  methods: {
+    approve(){
+      console.log(this.account)
+      console.log(getContract.getContractAddress("BLT"))
+      this.$store.dispatch("BLT/approve", {spender:this.account, amount:10**12}).then(res =>{
+        console.log(res)
+      })
+    },
+    borrow(){
+      this.$store.dispatch("LoanMarket/mortgageMarket",{tokenId:1,amount:this.amount_borrow,day:30,dayRate:3}).then(res =>{
+        console.log(res)
+        alert("Loan success")
+      }).catch(err => {
+        alert(err)
+        }
+      )
+    }
+  }
 }
 </script>
 
