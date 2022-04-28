@@ -4,31 +4,31 @@
     <div class="page-footer-part2 ">
       <div class="icon-box">
         <span></span>
-        <a class="icon" href="https://t.me/RainbowDAO" target="_blank">
+        <a class="icon" href="" target="_blank">
           <img src="../assets/img/telegram@2x.png" alt="">
         </a>
       </div>
       <div class="icon-box">
         <span></span>
-        <a class="icon" href="https://twitter.com/RainbowcityDAO" target="_blank">
+        <a class="icon" href="https://twitter.com/BitLoanLabs" target="_blank">
           <img src="../assets/img/twitter@2x.png" alt="">
         </a>
       </div>
       <div class="icon-box">
         <span></span>
-        <a class="icon" href="https://medium.com/rainbowcity" target="_blank">
+        <a class="icon" href="_" target="_blank">
           <img src="../assets/img/medium@2x.png" alt="">
         </a>
       </div>
       <div class="icon-box">
         <span></span>
-        <a class="icon" href="https://discord.gg/vbnvFEeYRr" target="_blank">
+        <a class="icon" href="" target="_blank">
           <img src="../assets/img/Discord@2x.png" alt="">
         </a>
       </div>
       <div class="icon-box">
         <span></span>
-        <a class="icon" href="https://github.com/RainbowDAO" target="_blank">
+        <a class="icon" href="https://github.com/BitLoanLab" target="_blank">
           <img src="../assets/img/github@2x.png" alt="">
         </a>
       </div>

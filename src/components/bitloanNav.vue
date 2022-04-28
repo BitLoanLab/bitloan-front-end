@@ -4,15 +4,15 @@
     <div class="nav-box">
       <img class="logo" src="../assets/imgs/logo.png" @click="$router.push('/')"/>
       <ul class="navbar-nav">
-        <li :class="{'active':$route.name=='RainbowCity'}" @click="openNew('/RainbowCity')">
-          <a class="w-font" href="#RainbowCity">HOME</a>
-          <a class="re-active" href="#RainbowCity">HOME</a>
+        <li :class="{'active':$route.name=='City'}" @click="openNew('/City')">
+          <a class="w-font" href="#City">HOME</a>
+          <a class="re-active" href="#City">HOME</a>
         </li>
 
 
-        <li :class="{'active':$route.name=='RainbowWarrior'}" @click="openNew('/RainbowWarrior')">
-          <a class="w-font" href="#RainbowWarrior">RAINBOW WARRIOR</a>
-          <a class="re-active" href="#RainbowWarrior">RAINBOW WARRIOR</a>
+        <li :class="{'active':$route.name=='Warrior'}" @click="openNew('/Warrior')">
+          <a class="w-font" href="#Warrior"> WARRIOR</a>
+          <a class="re-active" href="#Warrior"> WARRIOR</a>
         </li>
 
         <li>

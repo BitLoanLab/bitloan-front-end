@@ -1,12 +1,12 @@
 {
-  "name": "rainbowBank",
+  "name": "bitloan",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "abiUtils":"node ./src/utils/abiUtils.js"
+    "abiUtils": "node ./src/utils/abiUtils.js"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
@@ -58,5 +58,17 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Narwhalk/bitloan-front-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Narwhalk/bitloan-front-end/issues"
+  },
+  "homepage": "https://github.com/Narwhalk/bitloan-front-end#readme"
 }

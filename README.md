@@ -1,4 +1,4 @@
-# rainbowwibsite
+# bitLoanWibsite
 
 ## Project setup
 ```
