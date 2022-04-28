@@ -68,7 +68,7 @@
               <div class="layer2 flex-row justify-between">
                 <div class="layer3">
                   <span class="info8">1</span>
-                  <span class="txt7">RBT</span>
+                  <span class="txt7">BLT</span>
                 </div>
                 <span class="info9">=</span>
                 <div class="layer4">

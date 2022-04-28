@@ -54,7 +54,7 @@
       </div>
       <div class="nft-price">
         <span>
-          1RBT
+          1BLT
         </span>
         <span>
           =
