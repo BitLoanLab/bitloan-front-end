@@ -6,8 +6,8 @@
       {{ account.substr(0, 6) + '...' + account.substr(39, 3) }}
     </button>
     <button size="mini" @click="showWallet" v-show="!isConnected" class="button-connect">
-      <img src="../assets/img/wallet_icon.png" alt="">
-      Connect rinkeby
+      <img class="wallet" src="../assets/img/wallet_icon.png" alt="">
+      Connect
     </button>
     <div v-show="isShowConnectStatus" class="connect-panel " @click="isShowConnectStatus=false">
       <div class="mask"></div>
@@ -121,6 +121,11 @@ export default {
   color: #2c3e50;
   display: flex;
 
+  .wallet {
+    margin-right:10px;
+      width: 20px;
+      height: 20px;
+  }
   .button-connect {
     width: 160px;
     height: 40px;

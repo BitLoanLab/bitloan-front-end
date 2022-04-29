@@ -64,7 +64,6 @@ export default {
       return this.$store.state.app.isCollapse
     },
     userId() {
-      // return this.$store.state.rainbow.userId
       return 0
     }
   }
@@ -96,7 +95,7 @@ export default {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     .header-left {
       img{
-        width: 160px;
+        width: 100px;
       }
     }
     .nav-list{

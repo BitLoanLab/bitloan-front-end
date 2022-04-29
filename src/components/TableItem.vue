@@ -14,7 +14,7 @@
           <div class="info-item-title">
             {{ info.title }}
           </div>
-          <div class="info-item-value r-rainbow-color">
+          <div class="info-item-value r-bitloan-color">
             {{ info.data }}
           </div>
         </div>
