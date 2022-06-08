@@ -12,12 +12,9 @@ if (!fs.existsSync(writeDir)) {
 }
 const files = fs.readdirSync(buildDir);
 
-console.log("所有合约数量：", files.length)
-//创建index.js 导出所有合约
+console.log("all contracts ", files.length)
 let indexStr = ``, exportStr = `export default { `;
-//处理所有合约
 for (let i = files.length - 1; i >= 0; i--) {
-    // 获取合约 name 、 abi
     let contract = JSON.parse(fs.readFileSync(buildDir + files[i]), 'utf8');
     let name = contract.contractName;
     let abi = contract.abi;
@@ -33,26 +30,20 @@ for (let i = files.length - 1; i >= 0; i--) {
 	`
     let actions = ` const actions = { \n`;
     if(!contract.networks[666]){continue}
-    console.log("生成" + contract.contractName + ".js")
+    console.log("creat" + contract.contractName + ".js")
 
-    // 处理index.js
     indexStr += `import ${name} from "@/store/modules/abisMethods/${name}";`
     exportStr += `${name},`
-    // end处理index.js
 
-    // 处理方法
     for (let j = 0; j < abi.length; j++) {
         let functionObj = abi[j];
 
-        //call 方法
         if(functionObj.type == "function" &&functionObj.stateMutability == "view"){
-            // 处理参数
             let params = functionObj.inputs;
             let tempParamStr = ``
             for (let k = 0; k < params.length; k++) {
                 tempParamStr += params[k].name + ","
             }
-            // 处理参数end
 
             tempParamStr = tempParamStr.substr(0,tempParamStr.length-1)
             actions += `${functionObj.name} ({rootState}${tempParamStr.length>0?',':''} ${tempParamStr}){
@@ -67,16 +58,12 @@ for (let i = files.length - 1; i >= 0; i--) {
 			},\n`
 
         }
-        //end call 方法
-        //send 方法
         if(functionObj.type == "function" &&functionObj.stateMutability == "nonpayable"){
-            // 处理参数
             let params = functionObj.inputs;
             let tempParamStr = ``
             for (let k = 0; k < params.length; k++) {
                 tempParamStr += params[k].name + ","
             }
-            // 处理参数end
 
             tempParamStr = tempParamStr.substr(0,tempParamStr.length-1)
             actions += `${functionObj.name} ({rootState}${tempParamStr.length>0?',':''} ${tempParamStr}){
@@ -110,16 +97,12 @@ for (let i = files.length - 1; i >= 0; i--) {
 			},\n`
 
         }
-        //end send 方法
-        // send with value 方法
         if(functionObj.type == "function" &&functionObj.stateMutability == "payable"){
-            // 处理参数
             let params = functionObj.inputs;
             let tempParamStr = ``
             for (let k = 0; k < params.length; k++) {
                 tempParamStr += params[k].name + ","
             }
-            // 处理参数end
 
             tempParamStr = tempParamStr.substr(0,tempParamStr.length-1)
             actions += `${functionObj.name} ({rootState}, value ${tempParamStr.length>0?',':''} ${tempParamStr}){
@@ -154,11 +137,9 @@ for (let i = files.length - 1; i >= 0; i--) {
 			},\n`
 
         }
-        //end send with value方法
     }
     actions += `}`
     tempFileStr += actions
-    // 处理方法end
 
     tempFileStr += `
 			export default {
@@ -170,8 +151,7 @@ for (let i = files.length - 1; i >= 0; i--) {
 	`
     fs.writeFileSync(`${writeDir}${name}.js`, tempFileStr, 'utf8');
 }
-//end 处理所有合约
 exportStr += `}`
 indexStr += exportStr
 fs.writeFileSync(`${writeDir}index.js`, indexStr, 'utf8');
-console.log("已生成所有vue store")
+console.log("creat vue store")
